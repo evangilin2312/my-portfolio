@@ -557,3 +557,68 @@ footer {
     display: flex;
   }
 }
+/* ===== Social Icons & Resume Responsiveness ===== */
+.left-home i,
+.right-home i {
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.left-home i:hover,
+.right-home i:hover {
+  transform: scale(1.1);
+}
+
+.resume button {
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .left-home {
+    left: 30px;
+  }
+  .right-home {
+    right: 30px;
+  }
+  .left-home i,
+  .right-home i {
+    font-size: 2.2rem;
+  }
+  .resume {
+    left: 35%;
+  }
+  .resume button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .home {
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+  }
+  .left-home,
+  .right-home {
+    position: static; /* icons come inline instead of absolute */
+  }
+  .left-home i,
+  .right-home i {
+    font-size: 1.8rem;
+  }
+  .resume {
+    position: relative;
+    left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .resume button {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
+
