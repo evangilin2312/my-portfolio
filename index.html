@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger"><i class="fa fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="hero he">
+    <div class="hero-content animated blur-box">
+      <h1>Hello, I'm <span class="highlight">Evangilin</span></h1>
+      <p>A Front-End Developer</p>
+    </div>
+    <div class="home">
+      <div class="left-home">
+        <a  href="https://www.linkedin.com/in/evangilin-s-4b8184281/" target="_blank"><i class="fa-brands fa-linkedin fa-3x" style="color: rgb(250, 248, 248);"></i></a>
+      </div>
+      <div class="right-home">
+        <a href="https://github.com/evangilin2312" target="_blank" ><i class="fa-brands fa-github fa-3x" style="color: rgb(250, 248, 248);"></i></a>
+      </div>
+    </div>
+    <div class="res">
+      <div class="resume">
+        <a href="https://drive.google.com/file/d/1gG_OIqKMevkHDy9iHxzKqjzueO_pjeGM/view?usp=drivesdk" target="_blank">
+          <button href="">Get My Resume</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="contact-section">
+    <div class="blur-box contact-container">
+      <div class="contact-left1">
+        <img src="./eva1.jpg" width="300px" height="400px" class="contact-left1">
+      </div>
+      <div class="contact-right">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I’m a passionate web developer with a love for crafting clean, functional, and visually appealing digital
+            experiences. With a strong foundation in HTML, CSS, and JavaScript, I enjoy turning ideas into interactive,
+            user-friendly websites. My approach blends creativity with problem-solving, ensuring every project not only
+            looks good but works seamlessly.
+            Outside of coding, I’m constantly learning new technologies, exploring design trends, and working on
+            personal projects that push my skills further. I believe every line of code is a step toward building
+            something impactful.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skill" class="page-section hidden eva">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skill">
+      <span><i class="fa-brands fa-html5"></i> HTML <span class="percent">0%</span></span>
+      <div class="skill-bar">
+        <div class="fill" data-percent="80"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <span><i class="fa-brands fa-css3-alt"></i> CSS <span class="percent">0%</span></span>
+      <div class="skill-bar">
+        <div class="fill" data-percent="75"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <span><i class="fa-brands fa-js"></i> JavaScript <span class="percent">0%</span></span>
+      <div class="skill-bar">
+        <div class="fill" data-percent="50"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span><i class="fa-brands fa-python"></i> Python<span class="percent">0%</span></span>
+      <div class="skill-bar">
+        <div class="fill" data-percent="50"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span><i class="fa-brands fa-bootstrap"></i>"></i> Bootstrap<span class="percent">0%</span></span>
+      <div class="skill-bar">
+        <div class="fill" data-percent="50"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span><i class="fa-brands "></i>CloudFlare<span class="percent">0%</span></span>
+      <div class="skill-bar">
+        <div class="fill" data-percent="50"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="contact-section">
+    <div class="blur-box">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>PORTFOLIO</h3>
+          <p>Designed portfolio for Naan Mudhalavan using HTML, CSS, JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <h3>TEXT-TO-SPEECH</h3>
+          <p>Using Gtts, Playsound, and Nltk created a project that converts written text into natural-sounding speech.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>SENTIMENTAL-ANALYSIS</h3>
+          <p>Using Textblob, Nltk, and Scikit-learn, developed a sentiment analysis system to determine emotional tone
+            of text data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="blur-box contact-container">
+      <div class="contact-left">
+        <form id="contact-form">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Mail" required />
+          <input type="text" placeholder="Subject" required />
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit" class="btn-submit">Submit</button>
+        </form>
+      </div>
+      <div class="contact-right">
+        <h2><span class="emoji">📞</span> Contact</h2>
+        <p>
+          I am interested in working with any company that thinks my skill will be helpful for them.
+        </p>
+        <div class="contact-info">
+          <p><span class="emoji">📧</span> evangilingladys@gmail.com</p>
+          <p><span class="emoji">📞</span> +91 6385386747</p>
+          <p><span class="emoji">📍</span> Thoraipakkam, Chennai - 600097</p>
+          <p><span class="emoji">🐙</span> <a href="https://github.com/evangilin2312" target="_blank">GitHub Profile</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

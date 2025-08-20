@@ -1,0 +1,559 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #03356f;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+header {
+  background: rgba(7, 7, 7, 0.1);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: rgb(248, 246, 246);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f8c291;
+}
+
+/* HERO / HOME SECTION */
+
+.hero {
+  height: 100vh;
+  background: url('dried-flowers-vase-blue-wall.jpg') center/cover no-repeat;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background: rgba(0, 0, 0, 0.2); /* light black overlay instead */
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.5s ease-out;
+  background: rgba(77, 17, 217, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.highlight {
+  color: #f8c291;
+}
+.home{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.left-home{
+  position: absolute;
+  left: 60px;
+}
+.right-home{
+  position:absolute;
+  right: 60px;
+}
+.res{
+  position: relative;
+}
+.resume{
+  position: absolute;
+  left: 40%;
+  
+}
+
+
+
+
+/* Buttons */
+button, .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s;
+  font-weight: 500;
+  margin: 0.5rem;
+}
+
+button:hover, .btn:hover {
+  background: #f8c291;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Gradient Background Section */
+.royal-bg {
+  background: linear-gradient(to right, #7272f9, #4c55fc, #7272f9);
+  color: white;
+  border-radius: 8px;
+  margin: 2rem auto;
+  padding: 4rem 2rem;
+  backdrop-filter: blur(10px);
+}
+
+/* General Section */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  backdrop-filter: blur(4px);
+  color: white;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-section {
+  background: url('dried-flowers-vase-blue-wall.jpg') center/cover no-repeat;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  object-fit: cover;
+}
+
+.contact-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-left1{
+  object-fit: cover;
+  border-radius: 70px;
+}
+
+.contact-left input,
+.contact-left textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f5f5f5;
+}
+
+.btn-submit {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+}
+
+.contact-right h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-right p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #222;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+.contact-info a:hover {
+  color: #2563eb;
+}
+
+.emoji {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left, .contact-right {
+    padding: 1.5rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 0.8rem;
+  border: none;
+  background: #000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #444;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: white;
+  margin-top: 2rem;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}
+/* Slide-in horizontal animation (About section) */
+.slide-horizontal {
+  animation: slideFromRight 0.6s ease forwards;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide-up animation (Contact section) */
+.slide-vertical {
+  animation: slideFromBottom 0.6s ease forwards;
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Smooth fade-in */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Horizontal slide (About section) */
+.slide-horizontal {
+  animation: slideFromRight 0.6s ease forwards;
+}
+
+@keyframes slideFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Vertical slide (Contact section) */
+.slide-vertical {
+  animation: slideFromBottom 0.6s ease forwards;
+}
+
+@keyframes slideFromBottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* SKILL SECTION */
+.skill{
+  padding-bottom: 20px;
+}
+.page-section {
+  text-align: center;
+  color: white;
+  background: url('dried-flowers-vase-blue-wall.jpg') center/cover no-repeat;
+  padding: 4rem 2rem;
+}
+
+.skill-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.skill-text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 120px;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.skill-card p {
+  margin: 0.5rem 0;
+}
+
+.progress {
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.progress div {
+  background: white;
+  height: 100%;
+  text-align: right;
+  padding-right: 5px;
+  color: black;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.skill-bar {
+  background: #333;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-bar .fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ff0080, #ff8c00);
+  transition: width 1.5s ease-in-out;
+}
+
+.skill span {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#skill i {
+  color: #ff9800;
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 200px;
+    height: auto;
+    border-radius: 12px 0 0 12px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
